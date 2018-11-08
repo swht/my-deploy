@@ -11,7 +11,12 @@
         },
         {
             "type": "commit",
-            "value": "#[\\s\\S]*?deploy\\s*[\\s\\S]*?77"
+            "value": "#[\\s\\S]*?deploy\\s*[\\s\\S]*?77",
+            "reload":
+            {
+                "special":["appRoutes","app","xxx"],
+                "cmd":"echo '我要重启了!'"
+            }
         }
     ]
 }

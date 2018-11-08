@@ -107,6 +107,11 @@ $ vi .mydeploy.json
           {
               "type": "commit",
               "value": "#[\\s\\S]*?deploy\\s*[\\s\\S]*?77",
+              "reload":
+                {
+                    "special":["appRoutes","app","xxx"],
+                    "cmd":"echo '我要重启了!'"
+                },
               "env":[
                    "NODE_ENV=development"
                ]
@@ -129,3 +134,14 @@ now , your project file will update automatically
 ## License
 
   MIT
+
+
+##更新
+
+```
+    Author:南非波波
+    Email：qingbo.song@gmail.com
+    updatetime：2018.11.08
+    更新内容：增加特殊文件、目录处理规则，特殊列表中的文件及目录出现在提交记录中,触发cmd命令
+	应用场景:后端文件更新、前端渲染文件更新后需要提交
+```
